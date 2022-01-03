@@ -1,0 +1,197 @@
+.form {
+    width: 100%;
+    max-width: 650px;
+
+    &__label {
+        font-size: 15px;
+
+        &--required {
+            color: rgb(163, 5, 5);
+        }
+
+        &--heading {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+        }
+ 
+        &--checkbox {
+            padding: 3px 0 0 5px;
+        }
+
+        &--active {
+            border-bottom: 2px solid $url-color!important;
+            color: $text-color!important;
+            font-weight: 500!important;
+            font-size: 15px!important;
+            display: inline-block;
+        }
+    }
+
+    &__input {
+        font-size: 14px;
+        padding: 4px 6px;
+
+        &__feedback {
+            width: 100%;
+            padding: 5px 0 0 2px;
+            font-size: 14px;
+            margin: 0;
+            color: rgb(163, 5, 5);
+        }
+
+        &__counter {
+            padding-right: 64px;
+        }
+
+        &__checkbox {
+            margin: 0 0 6px 15px;
+        }
+    }
+
+    &__buttons { 
+        button {
+            &:disabled {
+                border: 1px solid #b1b1b1!important;
+                color: #b1b1b1!important;
+                background-color: #f3f3f3!important;
+
+                &:hover {
+                    cursor: not-allowed;
+                    color: #696969!important;
+                    background-color: $bg-grey!important;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        margin-right: 10px;
+
+        &--disabled {
+            &:disabled {
+                cursor: not-allowed;
+                border: 1px solid #c4c3c3;
+                color: rgb(150, 148, 148);
+                background-color:rgb(240, 240, 240);
+            }
+        }
+        
+        &--prev {
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+    }
+
+    &__info {
+        background-color: $main-blue;
+        padding: 5px 5px;
+    }
+
+    &__tooltip {
+        &__btn  {
+            max-height: 28px;
+            padding: 1px 5px;
+            background-color: $main-blue;
+            outline: none;
+            border-color: $main-blue;
+
+            &:hover .form__tooltip__btn--icon, &:focus .form__tooltip__btn--icon, &:active .form__tooltip__btn--icon {
+                color: $text-color!important;
+            }
+
+            &--icon {
+                color: white;
+                font-size: 10px;
+                display: block;
+
+            }
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        font-size: 12px;
+        right: 40px;
+        top: 3px;
+        z-index: 34;  
+
+        &--sm {
+            right: 6px;
+        }
+    }
+
+    &__submit--error {
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+    &__notification {
+        z-index: 99;
+        @include user-select;
+        
+        &__box {
+            background-color: white;
+            color: $text-font;
+
+            &--header {
+                background-color: $main-blue;
+                color: white;
+
+                span {
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    &__col {
+        max-width: 700px;
+
+        @media (max-width: 924px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__progress {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-bottom: 20px;
+
+        p {
+            border-bottom: 2px solid transparent;
+            width: unset;
+            color:#757575;
+            padding: 0 2px 0 1px;
+            font-size: 14px;
+            cursor: context-menu;
+
+            @media (max-width: 840px) {
+                padding: 0;
+                display: inline-block;
+                margin-right: 22px;
+                font-size: 15px;
+            }
+
+            @media (max-width: $sm-devices) {
+                margin-right: 2px;
+            }
+        }
+
+        i {
+            color: $url-color;
+            margin-left: 6px;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 840px) {
+            margin-bottom: 10px;
+            text-align: left!important;
+        }
+    }
+}

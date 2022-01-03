@@ -1,0 +1,159 @@
+.footer {
+    width: 100%;
+    background-color: $main-blue;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 20px;
+
+    &__container {
+        display: flex;
+    }
+
+    &__section {
+        align-self: center;
+        width: 40%;
+ 
+        @media (max-width: 850px) {
+            text-align: left!important;
+            width: 100%;
+            margin: 0 0 10px 0;
+        }
+
+        &--logo {
+            img {
+                display: inline-block;
+                width: 100%;
+                max-width: 120px;
+            }
+        }
+
+        &--part {
+            width: 33.33%;
+
+            @media (max-width: 850px) {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__first {
+        display: flex;
+
+        @media (max-width: 850px) {
+            display: block;
+        }
+    }
+
+    &__middle {
+        width: 20%;
+    }
+
+    &__box {
+        text-align: right;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        margin: 15px 0 5px 0;
+        color: white;
+        font-weight: 400;
+        font-size: 14px;
+
+        @media (max-width: 850px) {
+            margin: 15px 0 0 0;
+        }
+    }
+
+    &__icon {
+        color: $light-pink;
+        margin-right: 8px;
+    }
+
+    &__content {
+        display: block;
+
+        p {
+            padding: 0;
+        }
+
+        @media (max-width: 850px) {
+            p {
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+
+    &__detail {
+        color: white;
+        margin: 0;
+        padding: 0 0 2px 0;
+        font-size: 13px;
+
+        @media (max-width: 850px) {
+            display: inline-block;
+            margin: 0 14px 0 0;
+            line-height: 0.2px;
+        }
+
+        &--link {
+            color: white; 
+
+            &:hover {
+                color: $light-pink;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    form.footer__form {
+        width: 100%;
+        float: right;
+
+        button {
+            border-radius: 0 4px 4px 0;
+            float: right;
+            padding: 7px 12px 6px 12px;
+            font-size: 15px;
+            background-color: $light-pink!important;
+            border: 1px solid $bg-grey;
+            color: $text-color; 
+            border-left: none;
+            font-weight: 500;
+            cursor: pointer;
+
+            @media (max-width: 850px) {
+                float: unset;
+            }
+        }
+
+        input {
+            border-radius: 4px 0 0 4px;
+            padding: 8px 12px 9px 12px;
+            font-size: 12px;
+            font-style: italic;
+            border: 1px solid $bg-grey;
+            width: 60%;
+            max-width: 250px;
+            min-width: 150px;
+            outline: 0;
+
+            @media (max-width: 850px) {
+                float: left;
+            }
+        }
+
+        &::after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+    }
+}

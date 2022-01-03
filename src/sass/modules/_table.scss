@@ -1,0 +1,60 @@
+.table {
+    color: $text-color;
+    @include font-face($text-font, 16px, 400, normal, none);
+    @include user-select;
+
+    &--horizontal {
+        @media (max-width: $sm-devices) {
+            display: inline-grid;
+            white-space: nowrap;
+        }
+
+        table {
+            margin-top: 20px;
+            padding-bottom: 20px;
+             
+            tbody > tr {
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+            }
+
+            td {
+                 padding: 6px 6px;
+            }
+
+            @media (max-width: $sm-devices) {
+                overflow-x: auto;
+                display: block;
+
+                td {
+                    padding: 6px 20px 6px 6px;
+               }
+            }
+
+            &::-webkit-scrollbar {
+                width: 20px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: $detail-brown;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background-color: $bg-pink;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    &__link {
+        color: $url-color;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+            color: $main-blue;
+        }
+    }
+}

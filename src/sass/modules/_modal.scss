@@ -1,0 +1,29 @@
+.modal {
+    &-content {
+        border: 1px solid $bg-grey!important;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    &-header {
+        padding: 0 16px 25px 16px;
+    }
+
+    &__heading {
+        font-weight: 500;
+        font-size: 22px;
+        margin: 0;
+ 
+        &--icon {
+            margin-bottom: 4px;
+            cursor: pointer;
+            color: $main-blue;
+            font-size: 20px;
+
+            &:hover {
+                color: $url-color;
+            }
+        }
+    }  
+}
+
